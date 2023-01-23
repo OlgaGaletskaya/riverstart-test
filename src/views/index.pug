@@ -1,0 +1,145 @@
+extends _includes/layout
+
+block config
+    - var pagetitle = 'Index'
+    //- использовать в крайнем случае
+    //- var bodyClass = ''
+
+
+block content 
+    section.clients 
+        .container 
+            .clients__inner 
+                .clients__title Наши клиенты
+                .clients__items 
+                    .clients__item 
+                        img(src="assets/img/clients/1.png", loading="lazy", alt="")
+                        p 1 год вместе
+                    .clients__item 
+                        img(src="assets/img/clients/2.png", loading="lazy", alt="")
+                        p 1 год вместе
+                    .clients__item 
+                        img(src="assets/img/clients/3.png", loading="lazy", alt="")
+                        p 1 год вместе
+                    .clients__item 
+                        img(src="assets/img/clients/4.png", loading="lazy", alt="")
+                        p 1 год вместе
+                    .clients__item 
+                        img(src="assets/img/clients/5.png", loading="lazy", alt="")
+                        p 1 год вместе
+                    .clients__item 
+                        img(src="assets/img/clients/6.png", loading="lazy", alt="")
+                        p 1 год вместе
+                    .clients__item 
+                        img(src="assets/img/clients/7.png", loading="lazy", alt="")
+                        p 1 год вместе
+                    .clients__item 
+                        img(src="assets/img/clients/8.png", loading="lazy", alt="")
+                        p 1 год вместе
+                .clients__adv 
+                    img(src="assets/img/clients-avatar.png", loading="lazy", alt="")
+                    p Среднее время работы с клиентом — 5 лет <span> 💙 </span>
+
+
+    section.discuss
+        .container
+            .discuss__inner 
+                .discuss__content 
+                    h2.discuss__title Обсудить проект
+                    p.discuss__subtitle Расскажите о проекте в форме <span class="desc">справа</span><span class="mob">ниже</span>  или свяжитесь с нами напрямую  
+                    .discuss__contacts 
+                        .discuss__contact 
+                            a(href="mailto:hello@riverstart.ru") hello@riverstart.ru
+                            p Написать нам на почту
+                        .discuss__contact 
+                            a(href="https://t.me/ekhohrin")  @ekhohrin
+                                img(src="assets/img/avatar.png", loading="lazy", alt="")  
+                            p Написать нашему аккаунт- директору в Telegram
+                .discuss__form 
+                    .container 
+                        form(action="post") 
+                            .discuss__form--direction 
+                                p Что вас интересует?
+                                .discuss__form-chbxs
+                                    .discuss__form-chbx
+                                        input(type="checkbox", name="site", id="site")
+                                        label(for="site") Сайты
+                                    .discuss__form-chbx
+                                        input(type="checkbox", name="web", id="web")
+                                        label(for="web") Веб-сервис
+                                    .discuss__form-chbx
+                                        input(type="checkbox", name="marketing", id="marketing")
+                                        label(for="marketing") Маркетинг
+                                    .discuss__form-chbx
+                                        input(type="checkbox", name="app", id="app")
+                                        label(for="app") Приложение
+                                    .discuss__form-chbx
+                                        input(type="checkbox", name="branding", id="branding")
+                                        label(for="branding") Брендинг
+                                    .discuss__form-chbx
+                                        input(type="checkbox", name="more", id="more")
+                                        label(for="more") Что-то ещё
+                            .discuss__form--info 
+                                div
+                                        input(type="text", name="name", placeholder=" ")
+                                        label  Имя
+                                div.form-tel
+                                        input(type="tel", name="tel", placeholder=" ")
+                                        label  Телефон
+                                div
+                                        input(type="email", name="email", placeholder=" ")
+                                        label  Почта
+                            .discuss__form--text
+                                input(type="text", name="text", placeholder=" ")
+                                label  Опишите задачу 
+                                    span своими словами
+                            .discuss__form--budget 
+                                p Бюджет (₽):
+                                .discuss__form--budgetchbxs
+                                    .discuss__form--budgetchbx
+                                        input(type="radio", name="budget500k", id="budget500k")
+                                        label(for="budget500k") до 500к
+                                    
+                                    .discuss__form--budgetchbx
+                                        input(type="radio", name="budget500k", id="budget1m")
+                                        label(for="budget1m") до 1 млн
+                                        
+                                    .discuss__form--budgetchbx
+                                        input(type="radio", name="budget500k", id="budgetmore1m")
+                                        label(for="budgetmore1m") >1 млн
+                            .discuss__form--brief 
+                                label(for="brief") Прикрепить файл
+                                    input(type="file", name="brief", id="brief")
+                                    
+                                a(href="#") Наш бриф в Google Docs
+                            input(type="submit", value="Оставить заявку", class="btn") 
+                            p.discuss__policy Нажав на кнопку, вы соглашаетесь с политикой 
+                                a(href="#") обработки персональных данных
+
+                .discuss__address 
+                    .discuss__address-moscow 
+                        p.discuss__address-title Московский офис
+                        p.discuss__address-subtitle Новая пл., 6                        
+                        p.discuss__adress-number 8 (499) 112-46-21
+                    .discuss__address-nn 
+                        p.discuss__address-title Нижегородский офис
+                        p.discuss__address-subtitle ул. Рождественская, 26
+                        p.discuss__adress-number 8 (831) 2-889-354
+                        
+                    .discuss__address-tallin 
+                        p.discuss__address-title Таллинский офис
+                        p.discuss__address-subtitle 3 korrus, Metro Plaza, Viru väljak 2
+                        p.discuss__adress-number +372 610-42-53
+                        .discuss__address-add 
+                            img(src="assets/img/os.png", alt="")
+                            p Oceanstart LLC 
+                            p Worldwide outsourcing and outstaffing 
+                            
+                            a(href="#") oceanstart.dev 
+
+
+
+
+
+
+

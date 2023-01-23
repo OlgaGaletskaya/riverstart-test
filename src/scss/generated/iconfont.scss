@@ -1,0 +1,113 @@
+@font-face {
+	font-family: "iconfont";
+	src: url('fonts/iconfont/iconfont.eot?1674320611');
+	src: url('fonts/iconfont/iconfont.eot?1674320611#iefix') format('eot'),
+		url('fonts/iconfont/iconfont.woff2?1674320611') format('woff2'),
+		url('fonts/iconfont/iconfont.woff?1674320611') format('woff'),
+		url('fonts/iconfont/iconfont.ttf?1674320611') format('truetype'),
+		url('fonts/iconfont/iconfont.svg?1674320611#iconfont') format('svg');
+    font-display: swap;
+}
+
+@mixin icon-styles {
+	font-family: "iconfont";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+    vertical-align: text-bottom;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == be {
+		$char: "\E001";
+	}
+	@if $filename == facebook {
+		$char: "\E002";
+	}
+	@if $filename == fb {
+		$char: "\E003";
+	}
+	@if $filename == footer-logo {
+		$char: "\E004";
+	}
+	@if $filename == ig {
+		$char: "\E005";
+	}
+	@if $filename == instagram {
+		$char: "\E006";
+	}
+	@if $filename == link {
+		$char: "\E007";
+	}
+	@if $filename == logo {
+		$char: "\E008";
+	}
+	@if $filename == tw {
+		$char: "\E009";
+	}
+	@if $filename == twitter {
+		$char: "\E00A";
+	}
+	@if $filename == vk {
+		$char: "\E00B";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-be {
+	@include icon(be);
+}
+.icon-facebook {
+	@include icon(facebook);
+}
+.icon-fb {
+	@include icon(fb);
+}
+.icon-footer-logo {
+	@include icon(footer-logo);
+}
+.icon-ig {
+	@include icon(ig);
+}
+.icon-instagram {
+	@include icon(instagram);
+}
+.icon-link {
+	@include icon(link);
+}
+.icon-logo {
+	@include icon(logo);
+}
+.icon-tw {
+	@include icon(tw);
+}
+.icon-twitter {
+	@include icon(twitter);
+}
+.icon-vk {
+	@include icon(vk);
+}
+
